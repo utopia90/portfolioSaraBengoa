@@ -5,6 +5,16 @@ main {
     overflow: hidden;
 }
 
+.img-container {
+    &__mbile {
+        width: 20rem;
+
+        &__img {
+            width: 100%;
+        }
+    }
+}
+
 .main-nav {
     display: flex;
     justify-content: space-between;
@@ -86,10 +96,8 @@ main {
     margin-bottom: 33.33vh;
 
     @include mobile() {
-        flex-direction: column;
+        flex-direction: column-reverse;
         margin-top: 2rem;
-        width: 100%;
-        padding: 1rem;
     }
 }
 
@@ -114,9 +122,10 @@ main {
         width: 100%;
 
         @include mobile() {
-            font-size: 1.5rem;
+            font-size: 2.5rem;
             margin-bottom: 1rem;
             width: 100%;
+            margin-top: 0.5rem;
         }
 
 

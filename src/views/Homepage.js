@@ -17,7 +17,6 @@ import HireMe from './HireMe/HireMe.js'
 export default function Homepage() {
   const [flyoutMenuActive, setFlyoutMenuActive] = useState(false)
   const [screenToShow, setScreenToShow] = useState('')
-  
 
   function handleMenu(){
     setFlyoutMenuActive(!flyoutMenuActive)
