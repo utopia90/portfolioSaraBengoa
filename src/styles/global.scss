@@ -1,0 +1,30 @@
+
+$background: #f4f9fc;
+
+/// Main brand color
+$line: #7f00e0;
+/// Light grey
+$fill: #aadcec;
+/// Navy
+$text: #0f1b61;
+/// Light blue --greyish
+$subtext: #73bbc5;
+
+
+
+@font-face {
+    font-family: 'Bitter';
+    src: url(./fonts/Bitter-VariableFont_wght.ttf) format('truetype');
+}
+
+@mixin mobile{
+    @media screen and (max-width: 520px) {
+        @content;
+    }
+}
+@mixin tablet {
+    @media screen and (max-width: 900px) {
+        @content;
+    }
+}
+

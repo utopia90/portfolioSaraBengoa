@@ -1,0 +1,120 @@
+@import '../../styles/global.scss';
+
+
+
+
+.projects-container {
+    text-align: left;
+    padding-inline: 8rem;
+
+    @include mobile {
+        padding-inline: 0;
+        width: 100%;
+    }
+
+    h3 {
+        width: 50%;
+        color: $text;
+        font-weight: 300;
+        line-height: 1.5;
+        letter-spacing: 0.5;
+
+        @include mobile {
+            width: 100%;
+        }
+    }
+
+    &__txt {
+        color: $text;
+        width: 100%;
+        line-height: 1.5;
+        letter-spacing: 0.5;
+    }
+
+    &__icons {
+        display: flex;
+        justify-content: space-between;
+        width: 4rem;
+        height: 2rem;
+
+        &__img {
+            width: 1.2rem;
+
+            &:hover {
+                zoom: 1.2;
+            }
+
+        }
+
+    }
+
+    &__display {
+        padding-top: 2rem;
+    }
+
+    &__experts {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-bottom: 2rem;
+
+        @include mobile {
+            width: 100%;
+            display: block;
+        }
+
+        &__block {
+            width: 100%;
+        }
+
+        &__img {
+            width: 100%;
+
+            &-pokemon {
+                width: 90%;
+            }
+
+            &-monster {
+                width: 60%;
+                padding-left: 12rem;
+
+                @include mobile {
+                    padding-left: 0;
+                }
+            }
+        }
+    }
+}
+
+.git-link {
+    color: $text;
+}
+
+.project-title {
+    color: $text;
+    font-weight: 600;
+    font-family: 'Bitter';
+    text-align: left;
+    position: relative;
+
+    @include mobile {
+        width: max-content;
+    }
+
+    &:before {
+        content: "";
+        position: absolute;
+        left: -3rem;
+        top: 1rem;
+        height: 0.2rem;
+        background: #73bbc5;
+        width: 2rem;
+        height: 0.2rem;
+        transform-origin: left center;
+
+
+        @include mobile {
+            display: none;
+        }
+    }
+}

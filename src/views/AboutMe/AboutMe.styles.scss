@@ -1,0 +1,46 @@
+@import '../../styles/global.scss';
+
+.about-container {
+    display: flex;
+    width: 100%;
+
+    
+    @include mobile {
+        display: block;
+    }
+   
+}
+.txt-container {
+    width: 42%;
+    padding-inline: 7rem;
+    text-align: left;
+    font-family: sans-serif;
+    line-height: 1.8;
+
+    @include mobile {
+        width: 100%;
+        padding-inline: 0;
+    }
+}
+
+.enhanced-text {
+    color: $text;
+    font-weight: 600;
+}
+
+.img-container {
+    width: 50%;
+    align-self: baseline;
+    display: flex;
+    flex-direction: column;
+
+    @include mobile {
+        display: none;
+    }
+
+    img {
+        width: 100%;
+        position: relative;
+        bottom: 6rem;
+    }
+}

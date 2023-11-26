@@ -1,0 +1,41 @@
+@import '../../styles/global.scss';
+
+
+.modal-main {
+    position: absolute;
+    top: 11rem;
+    left: 28rem;
+    width: 45rem;
+    height: 20rem;
+    border-radius: 12px;
+    background: $text;
+    @include mobile {
+            
+    
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        }
+    
+
+    &__display-block {
+        display: block;
+    }
+
+    &__display-none {
+        display: none;
+    }
+
+    &__btn {
+        display: flex;
+        margin-left: auto;
+        border: none;
+        padding: 1rem;
+        font-size: 3rem;
+        background: transparent;
+        color: $fill;
+        cursor: pointer;
+    }
+}

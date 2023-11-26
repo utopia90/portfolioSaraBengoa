@@ -1,0 +1,14 @@
+
+@import './styles/global.scss';
+
+body  {
+  background-color: $background;
+  max-width: 100%;
+  overflow-x: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.App {
+  text-align: center;
+}
