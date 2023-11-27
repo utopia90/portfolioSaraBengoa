@@ -9,14 +9,15 @@
     height: 20rem;
     border-radius: 12px;
     background: $text;
+    z-index: 999;
     @include mobile {
-            
     
         position: absolute;
         top: 0;
         left: 0;
         height: 100%;
         width: 100%;
+        z-index: 999;
         }
     
 

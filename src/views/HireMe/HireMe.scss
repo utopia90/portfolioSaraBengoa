@@ -1,24 +1,41 @@
 @import '../../styles/global.scss';
 
 
+.hireme-container {
+    display: flex;
+    justify-content: space-between;
 
+    &__left {
+        display: flex;
+        flex-direction: column;
+        padding-inline: 8rem;
+        width: 100%;
+
+        @include mobile {
+            display: block;
+            padding-inline: 0;
+       }
+
+    }
+}
 .hireme-section {
     color: $text;
     text-align: left;
-    display: flex;
     width: 100%;
     @include mobile {
        flex-direction: column;
-}
+    }
+
+    .dot {
+        @include mobile {
+            display: none;
+         }
+    }
     a {
         color: $text;
     }
-    h3,p,span {
-        padding-inline: 8rem;
-        @include mobile {
-            padding-inline: 0;
-    }
-    }
+   
+    
     span {
         font-size: 24px;
     }
@@ -28,7 +45,8 @@
 
         img {
             width: 90%;
-            padding-top: 4rem;
+    position: relative;
+    bottom: 10rem;
 
           
         @include mobile {
@@ -41,8 +59,9 @@
 
 .contact-details {
     display: flex;
+    justify-content: space-between;
     padding-top: 3rem;
-    width: 65%;
+    width: 100%;
 
     @include mobile {
       flex-direction: column;

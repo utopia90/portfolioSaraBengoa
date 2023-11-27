@@ -22,11 +22,12 @@ main {
     padding-top: 3rem;
     padding-left: 3rem;
     position: relative;
-    z-index: 10000;
+    z-index: 1;
 
 
     @include mobile {
         padding-left: 0;
+        
     }
 
 

@@ -7,6 +7,7 @@ import Work from './Work.js'
 import HomePageSquare from './components/HomePageSquare/HomePageSquare.js'
 import AboutMe from './AboutMe/AboutMe.js'
 import HireMe from './HireMe/HireMe.js'
+import useMobile from '../hooks/useMobile.js'
 
 
 
@@ -17,6 +18,8 @@ import HireMe from './HireMe/HireMe.js'
 export default function Homepage() {
   const [flyoutMenuActive, setFlyoutMenuActive] = useState(false)
   const [screenToShow, setScreenToShow] = useState('')
+  const {isMobile} = useMobile()
+
 
   function handleMenu(){
     setFlyoutMenuActive(!flyoutMenuActive)
@@ -36,16 +39,17 @@ export default function Homepage() {
       "work": <Work/>,
       "projects": <Projects/>,
       "about": <AboutMe/>,
-      "hireMe" : <HireMe/>
+      "hireMe" : <HireMe/>,
     }
     return screensToShow[screenToShow] 
   }
   }
 
   const showHomePageOrSubPage = screenToShow.length > 0 ? getScreenToShow(): <HomePageSquare/>
+  const shouldShowNavbar = !(isMobile && screenToShow.length === 0 && flyoutMenuActive)
   return (
     <main>
-      <NavBar onClick={handleMenu } subpageActive={flyoutMenuActive === false} onHireMeClick={handleScreenToShow} />
+    {shouldShowNavbar && <NavBar onClick={handleMenu } subpageActive={flyoutMenuActive === false} onHireMeClick={handleScreenToShow} />}
 
       {flyoutMenuActive ?
         <FlyoutMenu screenToShow={handleScreenToShow} /> : showHomePageOrSubPage
