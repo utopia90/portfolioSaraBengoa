@@ -14,7 +14,8 @@ export default function useMobile() {
         }
     }, []);
     
-    const isMobile = width <= 600;
+    const isMobile = width <= 520;
+    const isTablet = width > 520 && width <= 700;
 
-  return {isMobile}
+  return {isMobile, isTablet}
 }

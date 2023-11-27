@@ -15,6 +15,10 @@
             display: block;
             padding-inline: 0;
        }
+       @include tablet {
+        display: block;
+        padding-inline: 0;
+   }
 
     }
 }
@@ -25,6 +29,9 @@
     @include mobile {
        flex-direction: column;
     }
+    @include tablet {
+        flex-direction: column;
+     }
 
     .dot {
         @include mobile {
@@ -67,4 +74,8 @@
       flex-direction: column;
       width: 100%;
  }
+ @include tablet {
+    flex-direction: column;
+    width: 100%;
+}
 }

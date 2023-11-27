@@ -11,6 +11,11 @@
         padding-inline: 0;
         width: 100%;
     }
+    @include tablet {
+        padding-inline: 0;
+        width: 100%;
+    }
+
 
     h3 {
         width: 50%;
@@ -20,6 +25,9 @@
         letter-spacing: 0.5;
 
         @include mobile {
+            width: 100%;
+        }
+        @include tablet {
             width: 100%;
         }
     }
@@ -72,6 +80,11 @@
             width: 100%;
             display: block;
         }
+        
+        @include tablet {
+            width: 100%;
+            display: block;
+        }
 
         &__block {
             width: 100%;
@@ -114,6 +127,10 @@
     @include mobile {
         width: max-content;
         font-size: 20px;
+    }
+    @include tablet {
+        width: max-content;
+        font-size: 24px;
     }
 
     &:before {

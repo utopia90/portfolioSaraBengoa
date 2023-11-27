@@ -22,6 +22,14 @@
         display: flex;
         justify-content: center;
     }
+    
+    @include tablet {
+        padding-top: 0;
+        padding-left: 0;
+        font-size: 3rem;
+        display: flex;
+        justify-content: center;
+    }
 
     &::before {
         content: "";

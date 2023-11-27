@@ -12,7 +12,7 @@ import useMobile from '../../../hooks/useMobile';
 
 export default function HomePageSquare() {
     const [cursorPosition, setCursorPosition] = useState({ top: 0, left: 0 })
-    const {isMobile} = useMobile()
+    const {isMobile, isTablet} = useMobile()
 
 
   
@@ -55,19 +55,19 @@ export default function HomePageSquare() {
               I'm a <strong>front-end developer</strong> from Málaga, Spain.
             </span>
           </section>
-        {isMobile ? <div className="img-container__mbile"><img className="img-container__mbile__img" src={sara} alt="sara-pic"/> </div>: 
+        {isMobile || isTablet ? <div className="img-container__mbile"><img className="img-container__mbile__img" src={sara} alt="sara-pic"/> </div>: 
           <section className="right_side" onMouseMove={onMouseMove} >
             <div className="right_side__bg"/>
   
             <div className="right_side__img-container">
   
-              <img src={hair} alt="sara-hair" className='right_side__img-container__hair'></img>
+              <img src={hair} alt="sara-hair" className='right_side__img-container__hair'/>
               <div className="right_side__eyes-container">
                 <div><img style={eyeBrowStyles} className="right_side__img-container__eyebrow" src={eyebrow} alt="sara-eyebrow" /><img src={eyes} alt="sara-eyes" className='right_side__img-container__eyes' /><span style={eyeStyles}>•</span></div>
                 <div><img style={eyeBrowStyles} className="right_side__img-container__eyebrow" src={eyebrow} alt="sara-eyebrow" /><img src={eyes} alt="sara-eyes" className='right_side__img-container__eyes' /><span style={eyeStyles}>•</span></div>
               </div>
-              <img src={nose} alt="sara-nose" className='right_side__img-container__nose'></img>
-              <img src={sunrise} alt="sara-sunrise" className='right_side__img-container__sunrise'></img>
+              <img src={nose} alt="sara-nose" className='right_side__img-container__nose'/>
+              <img src={sunrise} alt="sara-sunrise" className='right_side__img-container__sunrise'/>
   
   
             </div>

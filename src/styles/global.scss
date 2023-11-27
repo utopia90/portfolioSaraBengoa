@@ -23,7 +23,7 @@ $subtext: #73bbc5;
     }
 }
 @mixin tablet {
-    @media screen and (max-width: 900px) {
+    @media screen and (min-width: 520px)  and (max-width: 900px) {
         @content;
     }
 }
