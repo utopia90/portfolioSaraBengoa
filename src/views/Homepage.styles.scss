@@ -122,6 +122,8 @@ main {
 
     @include mobile() {
         padding: 0;
+        text-align: center;
+
     }
 
     &__title {
