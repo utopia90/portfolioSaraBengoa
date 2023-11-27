@@ -8,6 +8,7 @@ import HomePageSquare from './components/HomePageSquare/HomePageSquare.js'
 import AboutMe from './AboutMe/AboutMe.js'
 import HireMe from './HireMe/HireMe.js'
 import useMobile from '../hooks/useMobile.js'
+import ShowHomePageModal from './components/HomePageModal/HomePageModal.js'
 
 
 
@@ -18,8 +19,7 @@ import useMobile from '../hooks/useMobile.js'
 export default function Homepage() {
   const [flyoutMenuActive, setFlyoutMenuActive] = useState(false)
   const [screenToShow, setScreenToShow] = useState('')
-  const {isMobile} = useMobile()
-
+  const [showModal, setShowModal]  = useState(true)
 
   function handleMenu(){
     setFlyoutMenuActive(!flyoutMenuActive)
@@ -31,8 +31,18 @@ export default function Homepage() {
 
   }
  
+ function handleModal(){
+  setShowModal(!showModal)
+  setScreenToShow('')
+  setFlyoutMenuActive(true)
+
+
+ }
+ 
+
 
   function getScreenToShow(){
+
     if(screenToShow.length > 0){
     const screensToShow = {
       "home": <HomePageSquare/>,
@@ -40,21 +50,25 @@ export default function Homepage() {
       "projects": <Projects/>,
       "about": <AboutMe/>,
       "hireMe" : <HireMe/>,
+      "curriculum" : <ShowHomePageModal showModal={showModal} handleModal={handleModal}/>
     }
-    return screensToShow[screenToShow] 
-  }
-  }
+     return screensToShow[screenToShow] 
 
+
+  }
+  }
   const showHomePageOrSubPage = screenToShow.length > 0 ? getScreenToShow(): <HomePageSquare/>
-  const shouldShowNavbar = !(isMobile && screenToShow.length === 0 && flyoutMenuActive)
+
+
+
   return (
     <main>
-    {shouldShowNavbar && <NavBar onClick={handleMenu } subpageActive={flyoutMenuActive === false} onHireMeClick={handleScreenToShow} />}
+    <NavBar onClick={handleMenu } subpageActive={flyoutMenuActive === false} onHireMeClick={handleScreenToShow} />
 
       {flyoutMenuActive ?
-        <FlyoutMenu screenToShow={handleScreenToShow} /> : showHomePageOrSubPage
-         
-      }
+        <FlyoutMenu screenToShow={handleScreenToShow} /> :  showHomePageOrSubPage}
+     
+  
     </main>
   )
 

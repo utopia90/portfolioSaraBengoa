@@ -252,7 +252,64 @@ main {
 
     }
 }
+.cv-container {
+    padding-inline: 4rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: $fill;
 
+    
+    @include mobile {
+            padding-inline: 0;
+            padding-top: 2rem;
+    }
+
+    h3 {
+            font-weight: 300;
+    }
+
+    &__lng {
+            margin: 0 auto;
+            display: flex;
+            width: 22rem;
+            justify-content: space-between;
+            padding: 2rem;
+
+            @include mobile {
+                    flex-direction: column;
+                    padding: 1rem;
+                    height: 100%;
+                    width: 100%;
+
+            }
+
+            a {
+                    border: 2px solid $fill;
+                    padding: 1rem;
+                    font-weight: 600;
+                    border-radius: 12px;
+                    text-decoration: none;
+                    color: $fill;
+                    cursor: pointer;
+
+                    &:hover {
+                            opacity: 0.8;
+                            zoom: 1.02;
+                    }
+                    &:first-of-type {
+
+                        @include mobile {
+                            margin-bottom: 1rem;
+                    }
+                    
+                    }
+
+            }
+
+
+    }
+
+   
+}
 @keyframes logoIn {
     0% {
         opacity: 0;
