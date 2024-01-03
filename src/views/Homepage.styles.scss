@@ -1,18 +1,25 @@
 @import '../styles/global.scss';
 
 main {
-    width: 100%;
+    height: 100%;
     overflow: hidden;
 }
-
 .img-container {
-    &__mbile {
-        width: 20rem;
+    width: 78%;
+    display: flex;
+    align-items: center;
 
-        &__img {
-            width: 100%;
-        }
+    @include mobile {
+        width: 100%;
+        padding:0;
+        
     }
+
+
+    &__img {
+        width: 100%;
+    }
+
 }
 
 .main-nav {
@@ -34,6 +41,7 @@ main {
     &__right {
         display: flex;
         align-items: center;
+        
         width: 8rem;
         justify-content: space-between;
         cursor: pointer;
@@ -98,8 +106,7 @@ main {
 .home_container {
     display: flex;
     align-items: center;
-    overflow: hidden;
-    margin-bottom: 33.33vh;
+    width: 100%;
 
     @include mobile() {
         flex-direction: column-reverse;
@@ -109,6 +116,10 @@ main {
         flex-direction: column-reverse;
         margin-top: 2rem;
     }
+
+    > section {
+        width: 100%;
+    }
 }
 
 .left_side {
@@ -117,12 +128,12 @@ main {
     padding: 8rem;
     transform: translateY(1%);
     color: $text;
-    width: 100%;
     z-index: 9;
 
     @include mobile() {
         padding: 0;
         text-align: center;
+        width: 100%;
 
     }
 
@@ -168,12 +179,7 @@ main {
 }
 
 .right_side {
-    width: 36rem;
     animation: bakedAvatar 1.5s cubic-bezier(.215, .61, .355, 1) 1.25s backwards;
-
-    @include mobile() {
-        padding-top: 8rem;
-    }
 
 
     &__bg {
@@ -187,81 +193,81 @@ main {
         z-index: 0;
     }
 
-    &__img-container {
+    // &__img-container {
 
-        top: 12rem;
-        z-index: 9;
-
-
-        &__hair {
-            width: 36rem;
-            position: relative;
-            right: 14rem;
-            top: 1rem;
-
-            @include mobile {
-                width: 21rem;
-                right: 1rem;
-                top: -5rem;
-            }
-        }
-
-        &__eyes {
-            width: 5rem;
-        }
+    //     top: 12rem;
+    //     z-index: 9;
 
 
+    //     &__hair {
+    //         width: 36rem;
+    //         position: relative;
+    //         right: 14rem;
+    //         top: 1rem;
 
-        &__nose {
-            width: 3rem;
-            position: absolute;
-            bottom: 18rem;
-            right: 31rem;
+    //         @include mobile {
+    //             width: 21rem;
+    //             right: 1rem;
+    //             top: -5rem;
+    //         }
+    //     }
 
-            @include mobile {
-                width: 2rem;
-                bottom: 14rem;
-                right: 11rem;
-            }
-
-        }
-
-        &__sunrise {
-            width: 6rem;
-            position: absolute;
-            bottom: 15rem;
-            right: 28rem;
-
-            @include mobile {
-                width: 3rem;
-                bottom: 12rem;
-                right: 9rem;
-            }
-
-        }
-    }
-
-    &__eyes-container {
-        display: flex;
-        width: 12rem;
-        justify-content: space-between;
-        position: absolute;
-        bottom: 20rem;
-        right: 27rem;
+    //     &__eyes {
+    //         width: 5rem;
+    //     }
 
 
-        @include mobile {
-            width: 5rem;
-            bottom: 14rem;
-            right: 12rem;
-        }
 
-        div {
-            position: relative;
+    //     &__nose {
+    //         width: 3rem;
+    //         position: absolute;
+    //         bottom: 18rem;
+    //         right: 31rem;
 
-        }
+    //         @include mobile {
+    //             width: 2rem;
+    //             bottom: 14rem;
+    //             right: 11rem;
+    //         }
 
-    }
+    //     }
+
+    //     &__sunrise {
+    //         width: 6rem;
+    //         position: absolute;
+    //         bottom: 15rem;
+    //         right: 28rem;
+
+    //         @include mobile {
+    //             width: 3rem;
+    //             bottom: 12rem;
+    //             right: 9rem;
+    //         }
+
+    //     }
+    // }
+
+    // &__eyes-container {
+    //     display: flex;
+    //     width: 12rem;
+    //     justify-content: space-between;
+    //     position: absolute;
+    //     bottom: 20rem;
+    //     right: 27rem;
+
+
+    //     @include mobile {
+    //         width: 5rem;
+    //         bottom: 14rem;
+    //         right: 12rem;
+    //     }
+
+    //     div {
+    //         position: relative;
+
+    //     }
+
+    // }
 }
 .cv-container {
     padding-inline: 4rem;

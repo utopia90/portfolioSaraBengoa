@@ -31,7 +31,7 @@ I consider myself a lifelong learner, and I have a wide range of interests that 
 </p>
 
 </div>
-<div className="img-container">
+<div className="right-img-container">
   <img src={itGirl}/>
 <img src={travelling}/>
 </div>

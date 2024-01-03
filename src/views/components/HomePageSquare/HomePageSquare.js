@@ -1,18 +1,11 @@
 import React, {useState} from 'react'
 import '../.././Homepage.styles.scss';
-import hair from '../../../styles/svg/hair.svg'
-import nose from '../../../styles/svg/nose.svg'
-import eyes from '../../../styles/svg/eyes.svg'
-import sunrise from '../../../styles/svg/sunrise.svg'
-import eyebrow from '../../../styles/svg/eyebrow.svg'
 import sara from '../../../styles/imgs/sara.png'
-import useMobile from '../../../hooks/useMobile';
 
 
 
 export default function HomePageSquare() {
     const [cursorPosition, setCursorPosition] = useState({ top: 0, left: 0 })
-    const {isMobile, isTablet} = useMobile()
 
 
   
@@ -24,7 +17,7 @@ export default function HomePageSquare() {
   
   
   
-    const eyeStyles = {
+    /*const eyeStyles = {
       position: 'absolute',
       color: 'white',
       bottom: '2.2rem',
@@ -39,7 +32,7 @@ export default function HomePageSquare() {
     }
   
     const onMouseMove = e =>
-      setCursorPosition({ top: e.screenY, left: e.screenX });
+      setCursorPosition({ top: e.screenY, left: e.screenX });*/
    
     return (
       
@@ -52,11 +45,12 @@ export default function HomePageSquare() {
               name is <strong>Sara</strong><span className="dot">.</span>
             </div>
             <span className="left_side__subtitle">
-              I'm a <strong>front-end developer</strong> from Málaga, Spain.
+              I'm a <strong>front-end developer</strong>from Málaga, <br/> Spain.
             </span>
           </section>
-        {isMobile || isTablet ? <div className="img-container__mbile"><img className="img-container__mbile__img" src={sara} alt="sara-pic"/> </div>: 
-          <section className="right_side" onMouseMove={onMouseMove} >
+          <section className="right_side">
+        <div className="img-container"><img className="img-container__img" src={sara} alt="sara-pic"/> </div>
+          {/* <section className="right_side" onMouseMove={onMouseMove} >
             <div className="right_side__bg"/>
   
             <div className="right_side__img-container">
@@ -71,7 +65,8 @@ export default function HomePageSquare() {
   
   
             </div>
-          </section>}
+          </section> */}
+          </section>
         </div>
     )
   
