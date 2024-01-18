@@ -45,7 +45,7 @@ export default function HomePageSquare() {
               name is <strong>Sara</strong><span className="dot">.</span>
             </div>
             <span className="left_side__subtitle">
-              I'm a <strong>front-end developer</strong>from Málaga, <br/> Spain.
+              I'm a <strong>front-end developer </strong>from Málaga,Spain.
             </span>
           </section>
           <section className="right_side">

@@ -1,9 +1,9 @@
 import React from 'react'
 import SectionTitle from '../../components/SectionTitle/SectionTitle'
 import './Projects.styles.scss'
-import experts from '../../styles/imgs/experts.jpg'
-import pokemon from '../../styles/imgs/pokemon.jpg'
-import monsters from '../../styles/imgs/monsters.jpg'
+import experts from '../../styles/imgs/experts.png'
+import pokemon from '../../styles/imgs/pokemon.png'
+import monsters from '../../styles/imgs/monsters.png'
 
 
 import eye from '../../styles/svg/eye.svg'

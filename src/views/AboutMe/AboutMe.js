@@ -1,8 +1,8 @@
 import React from 'react'
 import SectionTitle from '../../components/SectionTitle/SectionTitle'
 import './AboutMe.styles.scss'
-import itGirl from '../../styles/imgs/it_girl.jpg'
-import travelling from '../../styles/imgs/traveling.jpg'
+import itGirl from '../../styles/imgs/it_girl.png'
+import travelling from '../../styles/imgs/traveling.png'
 
 
 export default function AboutMe() {

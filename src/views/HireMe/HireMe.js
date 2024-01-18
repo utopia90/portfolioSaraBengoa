@@ -3,7 +3,7 @@ import './HireMe.scss'
 import SectionTitle from '../../components/SectionTitle/SectionTitle'
 import CvEnglish from '../../styles/docs/CV_English.pdf'
 import CvSpanish from '../../styles/docs/CV_Spanish.pdf'
-import hire from '../../styles/imgs/hire.jpg'
+import hire from '../../styles/imgs/hire.png'
 
 
 
